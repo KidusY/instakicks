@@ -59,18 +59,18 @@ const newsFeedCard = (props) => {
             <View style={style.feedBack}>
                 <Text style={{ fontSize: 13, color: "#eeeeee" }}> {200} Likes </Text>
 
-                <View style={{ flexDirection: "row", justifyContent: "space-between", width: 70 }}>
+                <View style={{ flexDirection: "row", justifyContent: "space-between", width: 90 }}>
 
                     <FontAwesome name="commenting" size={24} color="#80deea" style={{ alignSelf: "center", textAlign: "center" }} />
 
                     {
                         isLiked ?
-                        <TouchableOpacity onPress={() => setIsLiked(!isLiked)}>
-                                <AntDesign name="hearto" size={20} color="white" style={{ alignSelf: "center", textAlign: "center", marginTop: 2  }} />
+                        <TouchableOpacity onPress={() => setIsLiked(!isLiked)} style={{width:50}}>
+                                <AntDesign name="hearto" size={22} color="white" style={{ alignSelf: "center", textAlign: "center", marginTop: 2  }} />
                             </TouchableOpacity>
                             :
-                            <TouchableOpacity onPress={() => setIsLiked(!isLiked)}>
-                                <AntDesign name="heart" size={20} color="#b71c1c" style={{ alignSelf: "center", textAlign: "center",marginTop:2 }}  />
+                            <TouchableOpacity onPress={() => setIsLiked(!isLiked)} style={{ width: 50 }}>
+                                <AntDesign name="heart" size={22} color="#b71c1c" style={{ alignSelf: "center", textAlign: "center",marginTop:2 }}  />
                             </TouchableOpacity>
                     }
                 </View>

@@ -1,9 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { View, Text, ScrollView, Image, StyleSheet, Dimensions } from 'react-native';
 import ExploreTab from '../components/exploreTab';
 import ExploreImgCard from '../components/exploreImgCard';
 import BottomNavigationBar from '../components/bottomNavigationBar';
-import { useState } from 'react/cjs/react.development';
+
 
 
 const { width } = Dimensions.get('screen')
@@ -32,10 +32,6 @@ const [filterFactors,setFilterFactors]=useState([])
              setFilterFactors(newFilterFactors)
         } 
       
-
-
-//console.log(filteredPics)
-
      }
  
     return (
