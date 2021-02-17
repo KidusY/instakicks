@@ -32,15 +32,12 @@ const [filterFactors,setFilterFactors]=useState([])
              setFilterFactors(newFilterFactors)
         } 
       
-let filteredPics = postedPics.filter((postedPic)=> {
-    if (!filterFactors.includes(postedPic.type))
-    return postedPic;
-})
+
 
 //console.log(filteredPics)
 
      }
-    console.log(filterFactors);
+ 
     return (
         <View style={{ backgroundColor: "#111111", flex: 1 }}>
             <View style={{ width: width, height: 100, flexDirection: 'row', alignContent: "center", justifyContent: "space-evenly" }}>
