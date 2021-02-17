@@ -9,6 +9,8 @@ function sideBarMenu({navigation}) {
   return (
     <LinearGradient colors={['#00695c', '#311b92']} start={{ x: 0.1, y: -1.5 }} locations={[0.6, 0.95]} style={style.sideBarMenuContainer}>
       
+      <TouchableOpacity onPress={() => navigation('Popular')}>
+
       <View style={style.menuItems}>
         <Text style={style.menuItemsText}> Popular </Text>
         <Entypo
@@ -23,6 +25,9 @@ function sideBarMenu({navigation}) {
           }}
         />
       </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation('Trending')}>
+
       <View style={style.menuItems}>
         <Text style={style.menuItemsText}> Trending</Text>
         <Entypo
@@ -37,6 +42,8 @@ function sideBarMenu({navigation}) {
           }}
         />
       </View>
+      </TouchableOpacity>
+      
       <TouchableOpacity onPress={()=>navigation('Explore')}>
 
       <View style={style.menuItems}>
