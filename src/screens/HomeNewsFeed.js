@@ -12,7 +12,7 @@ function HomeNewsFeed(props) {
   const Value = useContext(context);
 
   return (
-    <View style={{ backgroundColor:"#D1D1D1", flex:1}}>
+    <View style={{ backgroundColor:"#111", flex:1}}>
       <NewsFeedUserHeader />
       
       <View style={{ flexDirection: "row",flex:1 ,}}>
@@ -23,7 +23,8 @@ function HomeNewsFeed(props) {
           {
             dummyData.map((user,i)=>{
               const {userId,Email,displayName,profilePic,posts} = user
-               return <NewsFeedCard profileImgUrl = { profilePic} postedImgUrl = { posts[0].postPic } isLiked = { true} key={i}/>
+              const userInfo = { userId, Email, displayName, profileImgUrl: profilePic, postedImgUrl: posts[0].postPic}
+               return <NewsFeedCard {...userInfo} isLiked = { true} key={i}/>
             } )
           }
             

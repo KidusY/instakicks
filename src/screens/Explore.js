@@ -3,34 +3,66 @@ import { View, Text, ScrollView, Image, StyleSheet, Dimensions } from 'react-nat
 import ExploreTab from '../components/exploreTab';
 import ExploreImgCard from '../components/exploreImgCard';
 import BottomNavigationBar from '../components/bottomNavigationBar';
+import { useState } from 'react/cjs/react.development';
 
 
 const { width } = Dimensions.get('screen')
 const Explore = (props) => {
+    const [postedPics, setPostedPics] = useState([
+        { imgUrl: require('../assets/postedPic/post1.jpeg'), type: "jordan" },
+        { imgUrl: require('../assets/postedPic/post2.jpeg'), type: "yeezy" },
+        { imgUrl: require('../assets/postedPic/post3.jpeg'), type: "yeezy" },
+        { imgUrl: require('../assets/postedPic/post4.jpeg'), type: "jordan" },
+        { imgUrl: require('../assets/postedPic/post5.jpeg'), type: "yeezy" },
+        { imgUrl: require('../assets/postedPic/post6.jpeg'), type: "jordan" },
+        { imgUrl: require('../assets/postedPic/post7.jpeg'), type: "Adidas" },
+        { imgUrl: require('../assets/postedPic/post8.jpeg'), type: "jordan" },
+        { imgUrl: require('../assets/postedPic/post9.jpeg'), type: "yeezy" },
+        { imgUrl: require('../assets/postedPic/post10.jpeg'), type: "Adidas" }
+    ]
+)
+const [filterFactors,setFilterFactors]=useState([])
+   
+     const filter= (filterFactor) =>{ 
+
+         if (!filterFactors.includes(filterFactor))       
+      setFilterFactors([...filterFactors,filterFactor])
+        else{
+          let newFilterFactors  = filterFactors.filter((Factor)=> Factor !== filterFactor )
+             setFilterFactors(newFilterFactors)
+        } 
+      
+let filteredPics = postedPics.filter((postedPic)=> {
+    if (!filterFactors.includes(postedPic.type))
+    return postedPic;
+})
+
+//console.log(filteredPics)
+
+     }
+    console.log(filterFactors);
     return (
-        <View style={{ backgroundColor: "#D1D1D1", flex: 1 }}>
+        <View style={{ backgroundColor: "#111111", flex: 1 }}>
             <View style={{ width: width, height: 100, flexDirection: 'row', alignContent: "center", justifyContent: "space-evenly" }}>
 
-                <ExploreTab tabText={"Jordan 1"} />
-                <ExploreTab tabText={"Adidas"} />
-                <ExploreTab tabText={"Yeezy"} />
+                <ExploreTab tabText={"jordan"} bgColor={"#1EB9A7"} filter={filter}/>
+                <ExploreTab tabText={"Adidas"} bgColor={"#1EB9A7"} filter={filter}/>
+                <ExploreTab tabText={"yeezy"} bgColor={"#1EB9A7"} filter={filter}/>
             </View>
             <ScrollView scrollEnabled>
                 <View style={style.imgContainer}>
-                    <ExploreImgCard imgUrl = {require('../assets/postedPic/post1.jpeg')}/>
-                    <ExploreImgCard imgUrl = {require('../assets/postedPic/post2.jpeg')}/>
-                    <ExploreImgCard imgUrl = {require('../assets/postedPic/post3.jpeg')}/>
-                    <ExploreImgCard imgUrl = {require('../assets/postedPic/post4.jpeg')}/>
-                    <ExploreImgCard imgUrl = {require('../assets/postedPic/post5.jpeg')}/>
-                    <ExploreImgCard imgUrl = {require('../assets/postedPic/post6.jpeg')}/>
-                    <ExploreImgCard imgUrl = {require('../assets/postedPic/post7.jpeg')}/>
-                    <ExploreImgCard imgUrl = {require('../assets/postedPic/post8.jpeg')}/>
-                    <ExploreImgCard imgUrl = {require('../assets/postedPic/post9.jpeg')}/>
-                    <ExploreImgCard imgUrl = {require('../assets/postedPic/post10.jpeg')}/>
+                    {
+                        
+                        postedPics.map((postedPic, i) => {
+                           if(!filterFactors.includes(postedPic.type))
+                           return <ExploreImgCard imgUrl={postedPic.imgUrl} key={i}/>
+                            
+                            })
+                    }
                 </View>
             </ScrollView>
 
-            <BottomNavigationBar navigation={props.navigation.navigate}/>
+            <BottomNavigationBar navigation={props.navigation.navigate} />
 
         </View>
     )
@@ -47,7 +79,7 @@ const style = StyleSheet.create({
         width: width / 2,
         height: 170,
         resizeMode: 'cover',
-        borderRadius:10
+        borderRadius: 10
     }
 })
 

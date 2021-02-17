@@ -3,7 +3,7 @@ export default
         {
             userId: 1,
             Email: "abc@gmail.com",
-            displayName: "User_43_cv",
+            displayName: "User_40_cv",
             profilePic: require('../assets/ana-tavares-bKrmXTShj7k-unsplash.jpg'),
             followers: [2, 3, 4],
             following: [2, 3, 4],
@@ -42,7 +42,7 @@ export default
         {
             userId: 2,
             Email: "abc@gmail.com",
-            displayName: "User_43_cv",
+            displayName: "User_41_cv",
             profilePic: require('../assets/julian-wan-2EdIX-O2lkI-unsplash.jpg'),
             followers: [1, 3, 4],
             following: [1, 3, 4],
@@ -52,7 +52,7 @@ export default
                     postId: 1,
                     postName: "J VII",
                     postedDate: "2021-11-12",
-                    postPic: require('../assets/postedPic/reinhart-julian-b2htsZsPGPc-unsplash.jpg'),
+                    postPic: require('../assets/postedPic/post2.jpeg'),
                     likes: "200",
                   
                     comments: [
@@ -82,7 +82,7 @@ export default
         {
             userId: 3,
             Email: "abc@gmail.com",
-            displayName: "User_43_cv",
+            displayName: "User_42_cv",
             profilePic: require('../assets/ana-tavares-bKrmXTShj7k-unsplash.jpg'),
             followers: [1, 2, 4],
             following: [1, 2, 4],
@@ -91,7 +91,7 @@ export default
                     postId: 1,
                     postName: "J VII",
                     postedDate: "2021-11-12",
-                    postPic: require('../assets/postedPic/grailify-UwnvYQg-oYE-unsplash.jpg'),
+                    postPic: require('../assets/postedPic/post3.jpeg'),
                     likes: "200",
                    
                     comments: [
@@ -130,7 +130,7 @@ export default
                     postId: 1,
                     postName: "J VII",
                     postedDate: "2021-11-12",
-                    postPic: require('../assets/postedPic/t-q-dhRsfL-5SZg-unsplash.jpg'),
+                    postPic: require('../assets/postedPic/post4.jpeg'),
                     likes: "200",
                     comments: [
                         {

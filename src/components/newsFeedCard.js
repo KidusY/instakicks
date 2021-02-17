@@ -10,20 +10,19 @@ const { width } = Dimensions.get('screen')
 const newsFeedCard = (props) => {
     const [showModal, setShowModal] = useState(false);
     const [showOptions, setShowOptions] = useState(false);
+    const [isLiked, setIsLiked]= useState(false);
+
     return (
         <View style={style.cardContainer}>
             <View style={{ flexDirection: "row" }} >
-
                 <Image source={props.profileImgUrl} style={style.profileImg} />
-
                 <View style={{ marginLeft: 7 }}>
-                    <Text style={{ fontWeight: '600' }}> User_34_XX </Text>
-                    <Text style={{ fontSize: 12, color: "#32168E" }}><Entypo name="location-pin" size={18} color="black" />San Diego </Text>
+                    <Text style={{ fontWeight: '600',color:"white" }}> {props.displayName}</Text>
+                    <Text style={{ fontSize: 12, color: "#9575cd" }}><Entypo name="location-pin" size={18} color="#9575cd" />San Diego </Text>
                 </View>
                 <View style={{ textAlign: "right", marginLeft: 'auto' }} >
-                    <TouchableOpacity onPress={() => setShowOptions(!showOptions)} >
-
-                        <Entypo name="dots-three-horizontal" size={20} color="#424242" />
+                    <TouchableOpacity onPress={() => setShowOptions(!showOptions)}>
+                        <Entypo name="dots-three-horizontal" size={20} color="#eeeeee" />
                     </TouchableOpacity>
                     {
                         showOptions ? <View style={{
@@ -58,17 +57,21 @@ const newsFeedCard = (props) => {
                 </TouchableOpacity>
             </View>
             <View style={style.feedBack}>
-                <Text style={{ fontSize: 13, color: "#707070" }}> 200 Likes </Text>
+                <Text style={{ fontSize: 13, color: "#eeeeee" }}> {200} Likes </Text>
 
                 <View style={{ flexDirection: "row", justifyContent: "space-between", width: 70 }}>
 
-                    <FontAwesome name="commenting" size={24} color="#204755" style={{ alignSelf: "center", textAlign: "center" }} />
+                    <FontAwesome name="commenting" size={24} color="#80deea" style={{ alignSelf: "center", textAlign: "center" }} />
 
                     {
-                        props.isLiked ?
-                            <AntDesign name="hearto" size={20} color="black" style={{ alignSelf: "center", textAlign: "center" }} />
+                        isLiked ?
+                        <TouchableOpacity onPress={() => setIsLiked(!isLiked)}>
+                                <AntDesign name="hearto" size={20} color="white" style={{ alignSelf: "center", textAlign: "center", marginTop: 2  }} />
+                            </TouchableOpacity>
                             :
-                            <AntDesign name="heart" size={20} color="black" />
+                            <TouchableOpacity onPress={() => setIsLiked(!isLiked)}>
+                                <AntDesign name="heart" size={20} color="#b71c1c" style={{ alignSelf: "center", textAlign: "center",marginTop:2 }}  />
+                            </TouchableOpacity>
                     }
                 </View>
             </View>
@@ -82,7 +85,7 @@ const style = StyleSheet.create({
     cardContainer: {
         width: width - 50,
         height: 400,
-        backgroundColor: "#F5F5F5",
+        backgroundColor: "#212121",
         alignSelf: "center",
         borderRadius: 20,
         marginTop: 10,
@@ -107,8 +110,7 @@ const style = StyleSheet.create({
     }
     ,
     feedBack: {
-
-        margin: 5,
+        margin: 7,
         flexDirection: "row",
         justifyContent: 'space-between',
     }

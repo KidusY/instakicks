@@ -5,7 +5,7 @@ const { width } = Dimensions.get('screen')
 const userInfoHeader = (props) => {
     return (
         <View>
-            <LinearGradient colors={['#025E6F', '#2A477F', '#572D91']} start={{ x: 0.1, y: -1.5 }} locations={[0.1, 0.9, 0.7]} style={styles.linearGradient}>
+            <LinearGradient colors={['#004d40', '#0d47a1', '#4a148c']} start={{ x: 0.3, y: -1.5 }} locations={[0.999999, 0.5, 0.699]} style={styles.linearGradient}>
                 <View style={{ flexDirection: "row" }}>
                     <Image source={require('../assets/alex-suprun-ZHvM3XIOHoE-unsplash.jpg')} style={styles.profileImg} />
                     <View style={styles.profileInfoContainer}>

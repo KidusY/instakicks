@@ -84,7 +84,7 @@ const bottomNavigationBar = ({ navigation}) => {
 
 const style = StyleSheet.create({
   navBarContainer: {
-    backgroundColor: "#DBDBDB",
+    backgroundColor: "#212121",
     width: width,
     height: 80,
     alignSelf: "baseline",

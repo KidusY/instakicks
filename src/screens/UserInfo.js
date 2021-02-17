@@ -6,11 +6,11 @@ const { width } = Dimensions.get('screen')
 const UserInfo = (props) => {
 
     return (
-        <View style={{flex:1}}>
+        <View style={{flex:1,backgroundColor:"#111111"}}>
         <ScrollView>
             <UserInfoHeader/>
 
-            <View style={{flexDirection:"row", flexWrap:"wrap", width:width,marginTop:1}}>
+                <View style={{ flexDirection: "row", flexWrap: "wrap", width: width, marginTop: 1, backgroundColor: "#1111"}}>
                 
                     <Image source={require('../assets/postedPic/post1.jpeg')} style={styles.postedImg}/>
                     <Image source={require('../assets/postedPic/post2.jpeg')} style={styles.postedImg}/>

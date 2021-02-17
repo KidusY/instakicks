@@ -4,10 +4,10 @@ import { Entypo } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 const { height } = Dimensions.get("screen");
 function sideBarMenu({navigation}) {
-  console.log(navigation);
+ 
 
   return (
-    <LinearGradient colors={['#025E6F', '#2A477F']} start={{ x: 0.1, y: -1.5 }} locations={[0.1, 0.9]} style={style.sideBarMenuContainer}>
+    <LinearGradient colors={['#00695c', '#311b92']} start={{ x: 0.1, y: -1.5 }} locations={[0.6, 0.95]} style={style.sideBarMenuContainer}>
       
       <View style={style.menuItems}>
         <Text style={style.menuItemsText}> Popular </Text>
