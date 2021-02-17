@@ -6,6 +6,7 @@ import UserInfo from './src/screens/UserInfo'
 import Explore from './src/screens/Explore';
 import Trending from './src/screens/Trending';
 import Popular from './src/screens/Popular';
+import Comments from './src/screens/Comments';
 import { ContextProvider } from "./src/context";
 const navigator = createStackNavigator(
   {
@@ -13,7 +14,8 @@ const navigator = createStackNavigator(
     Explore,
     Trending,
     Popular,
-    UserInfo
+    UserInfo,
+    Comments
   },
   {
     initialRouteName: "HomeNewsFeed",

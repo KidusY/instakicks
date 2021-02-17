@@ -7,7 +7,7 @@ const { width } = Dimensions.get("screen");
 function newsFeedUserHeader() {
   return (
 
-    <LinearGradient colors={['#004d40', '#0d47a1', '#4a148c']} start={{ x: 0.3, y: -1.5 }} locations={[0.999999, 0.5, 0.699]} style={style.headerContainer}>
+    <LinearGradient colors={['#111', '#111', '#111']} start={{ x: 0.3, y: -1.5 }} locations={[0.999999, 0.5, 0.699]} style={style.headerContainer}>
       <View style={{ flexDirection: 'row', width: width, }}>
 
         <View

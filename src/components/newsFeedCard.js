@@ -61,7 +61,10 @@ const newsFeedCard = (props) => {
 
                 <View style={{ flexDirection: "row", justifyContent: "space-between", width: 90 }}>
 
+                <TouchableOpacity onPress={()=> props.navigation("Comments", {comments:props.posts})}>
+
                     <FontAwesome name="commenting" size={24} color="#80deea" style={{ alignSelf: "center", textAlign: "center" }} />
+                </TouchableOpacity>
 
                     {
                         isLiked ?
@@ -83,7 +86,7 @@ const newsFeedCard = (props) => {
 const style = StyleSheet.create({
 
     cardContainer: {
-        width: width - 50,
+        width: width,
         height: 400,
         backgroundColor: "#212121",
         alignSelf: "center",

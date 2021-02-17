@@ -16,15 +16,15 @@ function HomeNewsFeed(props) {
       <NewsFeedUserHeader />
       
       <View style={{ flexDirection: "row",flex:1 ,}}>
-        <SideBarMenu navigation={props.navigation.navigate}/>
+        {/* <SideBarMenu navigation={props.navigation.navigate}/> */}
         
         <View>          
           <ScrollView scrollEnabled>
           {
             dummyData.map((user,i)=>{
               const {userId,Email,displayName,profilePic,posts} = user
-              const userInfo = { userId, Email, displayName, profileImgUrl: profilePic, postedImgUrl: posts[0].postPic}
-               return <NewsFeedCard {...userInfo} isLiked = { true} key={i}/>
+              const userInfo = { userId, Email, displayName, profileImgUrl: profilePic, postedImgUrl: posts[0].postPic, posts}
+              return <NewsFeedCard {...userInfo} navigation={props.navigation.navigate} key={i}/>
             } )
           }
             
