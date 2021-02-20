@@ -18,16 +18,19 @@ export default
                         {
                             commentsId: 1,
                             commentedBy: "Alex_j23",
+                            profilePic:require('../assets/ana-tavares-bKrmXTShj7k-unsplash.jpg'),
                             comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros'
                         },
                         {
                             commentsId: 2,
                             commentedBy: "john_j23",
+                            profilePic: require('../assets/julian-wan-2EdIX-O2lkI-unsplash.jpg'),
                             comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros'
                         },
                         {
                             commentsId: 3,
                             commentedBy: "Al_j23",
+                            profilePic: require('../assets/julian-wan-2EdIX-O2lkI-unsplash.jpg'),
                             comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros'
                         },
 
@@ -59,16 +62,19 @@ export default
                         {
                             commentsId: 1,
                             commentedBy: "Alex_j23",
+                            profilePic: require('../assets/ana-tavares-bKrmXTShj7k-unsplash.jpg'),
                             comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros'
                         },
                         {
                             commentsId: 2,
                             commentedBy: "john_j23",
+                            profilePic: require('../assets/julian-wan-2EdIX-O2lkI-unsplash.jpg'),
                             comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros'
                         },
                         {
                             commentsId: 3,
                             commentedBy: "Al_j23",
+                            profilePic: require('../assets/julian-wan-2EdIX-O2lkI-unsplash.jpg'),
                             comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros'
                         },
 
@@ -98,16 +104,19 @@ export default
                         {
                             commentsId: 1,
                             commentedBy: "Alex_j23",
+                            profilePic: require('../assets/ana-tavares-bKrmXTShj7k-unsplash.jpg'),
                             comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros'
                         },
                         {
                             commentsId: 2,
                             commentedBy: "john_j23",
+                            profilePic: require('../assets/julian-wan-2EdIX-O2lkI-unsplash.jpg'),
                             comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros'
                         },
                         {
                             commentsId: 3,
                             commentedBy: "Al_j23",
+                            profilePic: require('../assets/julian-wan-2EdIX-O2lkI-unsplash.jpg'),
                             comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros'
                         },
 
@@ -136,16 +145,19 @@ export default
                         {
                             commentsId: 1,
                             commentedBy: "Alex_j23",
+                            profilePic: require('../assets/ana-tavares-bKrmXTShj7k-unsplash.jpg'),
                             comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros'
                         },
                         {
                             commentsId: 2,
                             commentedBy: "john_j23",
+                            profilePic: require('../assets/ana-tavares-bKrmXTShj7k-unsplash.jpg'),
                             comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros'
                         },
                         {
                             commentsId: 3,
                             commentedBy: "Al_j23",
+                            profilePic: require('../assets/julian-wan-2EdIX-O2lkI-unsplash.jpg'),
                             comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros'
                         },
 
