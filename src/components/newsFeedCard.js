@@ -102,7 +102,7 @@ const style = StyleSheet.create({
         
     },
     postedImg: {
-        width: (width - 70),
+        width: (width),
         height: 270,
         alignSelf: "center",
         marginTop: 10,
